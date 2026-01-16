@@ -145,7 +145,7 @@
     &copy; 2026 Sarabjit Kaur | Hosted on GitHub Pages
 </footer>
 
-<script>
+<!-- <script>
     const searchInput = document.getElementById('searchInput');
     const booksGrid = document.getElementById('booksGrid').children;
     const blogsGrid = document.getElementById('blogsGrid').children;
@@ -167,7 +167,30 @@
                 title.includes(query) || category.includes(query) ? "block" : "none";
         });
     });
+</script>-->
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const bookCards = document.querySelectorAll('#booksGrid .card');
+    const blogCards = document.querySelectorAll('#blogsGrid .card');
+
+    searchInput.addEventListener('input', function () {
+        const query = this.value.toLowerCase().trim();
+
+        [...bookCards, ...blogCards].forEach(card => {
+            const title = card.dataset.title.toLowerCase();
+            const category = card.dataset.category.toLowerCase();
+
+            if (title.includes(query) || category.includes(query)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
 </script>
+
 
 </body>
 </html>
+
