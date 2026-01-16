@@ -6,7 +6,7 @@ The website is built using HTML, CSS, and JavaScript and is hosted on GitHub Pag
 🔗 Live Website
 
 👉 View the live site:
-https://sarabjitkaur-blogger.github.io/
+https://sarabjit-kaur9.github.io/myLibrary/
 
 ✍️ About the Website
 
