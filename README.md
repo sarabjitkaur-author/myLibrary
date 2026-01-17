@@ -45,8 +45,6 @@ Dedicated sections for Books and Blogs
 
 External links to trusted platforms (Notion Press & Blogger)
 
-Client-side search functionality
-
 Optimized for GitHub Pages hosting
 
 📖 Author
