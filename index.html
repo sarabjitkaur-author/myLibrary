@@ -30,20 +30,6 @@
         padding: 2rem;
     }
 
-    .search-box {
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-
-    .search-box input {
-        width: 80%;
-        max-width: 400px;
-        padding: 0.6rem;
-        font-size: 1rem;
-        border-radius: 4px;
-        border: 1px solid #ccc;
-    }
-
     h2 {
         margin-bottom: 1rem;
         color: #333;
@@ -106,16 +92,11 @@
 
 <div class="container">
 
-    <!-- Search -->
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search books or blogs...">
-    </div>
-
     <!-- Books Section -->
     <section>
         <h2>Books</h2>
-        <div class="library-grid" id="booksGrid">
-            <div class="card" data-title="Visit My Books" data-category="Books">
+        <div class="library-grid">
+            <div class="card">
                 <h3>Visit My Books</h3>
                 <p>Explore my published books on Notion Press</p>
                 <a href="https://notionpress.com/author/968992" target="_blank">
@@ -128,8 +109,8 @@
     <!-- Blogs Section -->
     <section style="margin-top: 3rem;">
         <h2>Blogs</h2>
-        <div class="library-grid" id="blogsGrid">
-            <div class="card" data-title="Visit My Blogs" data-category="Blogs">
+        <div class="library-grid">
+            <div class="card">
                 <h3>Visit My Blogs</h3>
                 <p>Read my articles and learning journeys on Blogger</p>
                 <a href="https://www.blogger.com/profile/01836877362985086170" target="_blank">
@@ -145,83 +126,6 @@
     &copy; 2026 Sarabjit Kaur | Hosted on GitHub Pages
 </footer>
 
-<!-- <script>
-    const searchInput = document.getElementById('searchInput');
-    const booksGrid = document.getElementById('booksGrid').children;
-    const blogsGrid = document.getElementById('blogsGrid').children;
-
-    searchInput.addEventListener('input', function () {
-        const query = this.value.toLowerCase();
-
-        Array.from(booksGrid).forEach(card => {
-            const title = card.dataset.title.toLowerCase();
-            const category = card.dataset.category.toLowerCase();
-            card.style.display =
-                title.includes(query) || category.includes(query) ? "block" : "none";
-        });
-
-        Array.from(blogsGrid).forEach(card => {
-            const title = card.dataset.title.toLowerCase();
-            const category = card.dataset.category.toLowerCase();
-            card.style.display =
-                title.includes(query) || category.includes(query) ? "block" : "none";
-        });
-    });
-</script>-->
-
-<!--<script>
-    const searchInput = document.getElementById('searchInput');
-    const bookCards = document.querySelectorAll('#booksGrid .card');
-    const blogCards = document.querySelectorAll('#blogsGrid .card');
-
-    searchInput.addEventListener('input', function () {
-        const query = this.value.toLowerCase().trim();
-
-        [...bookCards, ...blogCards].forEach(card => {
-            const title = card.dataset.title.toLowerCase();
-            const category = card.dataset.category.toLowerCase();
-
-            if (title.includes(query) || category.includes(query)) {
-                card.style.display = "";
-            } else {
-                card.style.display = "none";
-            }
-        });
-    });
-</script></script>-->
-<script>
-    const searchInput = document.getElementById('searchInput');
-    const cards = document.querySelectorAll('.card');
-
-    const noResultsMessage = document.createElement('p');
-    noResultsMessage.textContent = 'No matching books or blogs found.';
-    noResultsMessage.style.textAlign = 'center';
-    noResultsMessage.style.color = '#777';
-    noResultsMessage.style.display = 'none';
-    document.querySelector('.container').appendChild(noResultsMessage);
-
-    searchInput.addEventListener('input', function () {
-        const query = this.value.toLowerCase().trim();
-        let visibleCount = 0;
-
-        cards.forEach(card => {
-            const title = card.dataset.title.toLowerCase();
-            const category = card.dataset.category.toLowerCase();
-
-            if (title.includes(query) || category.includes(query)) {
-                card.style.display = '';
-                visibleCount++;
-            } else {
-                card.style.display = 'none';
-            }
-        });
-
-        noResultsMessage.style.display = visibleCount === 0 ? 'block' : 'none';
-    });
-</script>
-
-
 </body>
 </html>
-
 
