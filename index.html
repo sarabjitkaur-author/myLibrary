@@ -169,7 +169,7 @@
     });
 </script>-->
 
-<script>
+<!--<script>
     const searchInput = document.getElementById('searchInput');
     const bookCards = document.querySelectorAll('#booksGrid .card');
     const blogCards = document.querySelectorAll('#blogsGrid .card');
@@ -188,9 +188,40 @@
             }
         });
     });
+</script></script>-->
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+
+    const noResultsMessage = document.createElement('p');
+    noResultsMessage.textContent = 'No matching books or blogs found.';
+    noResultsMessage.style.textAlign = 'center';
+    noResultsMessage.style.color = '#777';
+    noResultsMessage.style.display = 'none';
+    document.querySelector('.container').appendChild(noResultsMessage);
+
+    searchInput.addEventListener('input', function () {
+        const query = this.value.toLowerCase().trim();
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const title = card.dataset.title.toLowerCase();
+            const category = card.dataset.category.toLowerCase();
+
+            if (title.includes(query) || category.includes(query)) {
+                card.style.display = '';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        noResultsMessage.style.display = visibleCount === 0 ? 'block' : 'none';
+    });
 </script>
 
 
 </body>
 </html>
+
 
