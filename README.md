@@ -18,7 +18,7 @@ Links to my published books available on Notion Press.
 Blogs
 Direct access to my blogs hosted on Blogger.
 
-The site also includes a search feature that allows users to quickly filter content by title or category.
+
 
 🛠️ Technologies Used
 
