@@ -3,12 +3,11 @@
 This repository contains the source code for my Personal Library website, which showcases my published books and blogs in a clean, simple, and user-friendly format.
 The website is built using HTML, CSS, and JavaScript and is hosted on GitHub Pages.
 
-🔗 Live Website
-
-👉 View the live site:
-https://sarabjitkaur-blogger.github.io/
-
-✍️ About the Website
+### 🌐 Live Demo
+https://sarabjit-kaur9.github.io/myLibrary/
+ 
+ 
+ About the Website
 
 The Personal Library website serves as a central hub for my written work:
 
